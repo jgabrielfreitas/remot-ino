@@ -3,13 +3,14 @@ IR remote for arduino uno
 
 ### About
 `remot-ino` is a arduino application to automate stuffs using IR.
+
 things like "open netflix", "turn on air conditioner", "turn on/off TV"..
 
 
 ### Dependences
 - [Arduino-IRemote](https://github.com/z3t0/Arduino-IRremote)
 
-### LICENSE
+### License
 ```
 MIT License
 
