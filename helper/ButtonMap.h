@@ -1,0 +1,1 @@
+char* POWER = 0xE0E040BF;

@@ -1,19 +1,39 @@
-//***************** INCLUDES *********************** 
+// ***************** INCLUDES ***********************
 #include <Arduino.h>
-
-// int LED_BUILTIN = 13;
+bool ON = true;
+bool OFF = false;
+bool status = OFF;
 
 void ledSetUp()
 {
 	pinMode(LED_BUILTIN, OUTPUT);
 }
 
-void ledOn()
+void turnOn()
 {
 	digitalWrite(LED_BUILTIN, HIGH);
+	status = ON;
 }
 
-void ledOff()
+void turnOff()
 {
 	digitalWrite(LED_BUILTIN, LOW);
+	status = OFF;
+}
+
+bool isTurnedOn()
+{
+	return status;
+}
+
+void changeStatus()
+{
+	if (isTurnedOn() == ON)
+	{
+		turnOff();
+	}
+	else
+	{
+		turnOn();
+	}
 }
